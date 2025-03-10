@@ -73,7 +73,7 @@ app.delete("/missions/:id", (req, res) => {
     const paramsId = req.params.id;
     for (let i = 0; i < missions.length; i++) {
         if (missions[i].id === paramsId) {
-            missions = missions.filter((item) => item.id !== paramsId);  // تصحيح هنا
+            missions = missions.filter((item) => item.id !== paramsId);  
             return res.send(missions[i]);
         }
     }
