@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 
 app.use(urlencoded({ extended: true }));
-app.use(json());  // إضافة هذا للتعامل مع JSON
+app.use(json());  
 
 const missions = [
     { 
@@ -34,7 +34,7 @@ const missions = [
 
 app.post('/missions', (req, res) => {
     const data = req.body;
-    data.astronaut = JSON.parse(data.astronaut);  // تصحيح هنا
+    data.astronaut = JSON.parse(data.astronaut); 
     missions.push(data);
     console.log(req.body); 
     res.send("create mission");
@@ -56,13 +56,13 @@ app.get("/missions/:id", (req, res) => {
 
 app.put('/missions/:id', (req, res) => {
     const data = req.body;
-    data.astronaut = JSON.parse(data.astronaut);  // تصحيح هنا
+    data.astronaut = JSON.parse(data.astronaut); 
 
     console.log(data);
 
     for (let i = 0; i < missions.length; i++) {
         if (missions[i].id === data.id) {
-            missions[i] = data;  // تصحيح هنا
+            missions[i] = data;  
             return res.send("update the mission");
         }
     }
