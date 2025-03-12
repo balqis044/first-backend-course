@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index2.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js"
   },
   "repository": {
     "type": "git",
@@ -17,10 +18,15 @@
   },
   "homepage": "https://github.com/balqis044/first-backend-course#readme",
   "dependencies": {
+    "@prisma/client": "^6.5.0",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
     "egs": "^0.3.1",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
-    "nodemon": "^3.1.9"
+    "mysql2": "^3.13.0",
+    "nodemon": "^3.1.9",
+    "prisma": "^6.5.0"
   },
   "description": ""
 }
